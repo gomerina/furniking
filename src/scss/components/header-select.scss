@@ -1,0 +1,65 @@
+.select {
+	position: relative;
+}
+.select__item {
+	position: relative;
+	padding: 0 25px 0 0;
+	margin: 0 20px 0 0;
+	max-width: 140px;
+}
+.select__title {
+	cursor: pointer;
+}
+
+.select__value span {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+.select__value {
+	display: flex;
+	justify-content: flex-end;
+}
+.select__value::before {
+	content: "";
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 22px;
+	height: 7px;
+	background: url('../img/sprite.svg#select') no-repeat center;
+	background-size: 100% 100%;
+}
+.select__options {
+	color: #000;
+	display: none;
+	position: absolute;
+	top: 34px;
+	border-radius: 0 0 4px 4px;
+	min-width: 100%;
+	width: 150px;
+	left: 0;
+	background-color: #fff;
+	border-top: 0;
+	border: 1px solid #d9d9d9;
+	border-top: 0;
+	font-size: 16px;
+	padding: 0px 0px 5px 0px;
+}
+.select__option {
+	cursor: pointer;
+	padding: 10px;
+	margin: 0px 0px 0px 0px;
+}
+.select._active {
+	z-index: 5;
+}
+.select._active .select__value::before {
+	transform: rotate(-180deg) translateY(10%);
+}
+.select._active.select__options {
+	display: block;
+}

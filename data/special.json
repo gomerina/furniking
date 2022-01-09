@@ -1,0 +1,22 @@
+[
+	{
+		"img": "img/s-1.png",
+		"title": "Living Room Furniture",
+		"descr": "You don't have a chair. Are you ready for growth? Shop with us 40% discount!",
+		"currentPrice": "150",
+		"oldPrice": "250",
+		"flag": "blue",
+		"flagPosition": "right",
+		"flagText": "40% off"
+	},
+	{
+		"img": "img/s-2.png",
+		"title": "Modern chair",
+		"descr": "Hot chairs of the modern era are now available in our stock.",
+		"currentPrice": "75",
+		"oldPrice": "150",
+		"flag": "blue",
+		"flagPosition": "right",
+		"flagText": "50% off"
+	}
+]

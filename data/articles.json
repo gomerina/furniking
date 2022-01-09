@@ -1,0 +1,30 @@
+[
+	{
+		"img": "img/a-1.png",
+		"name": "FURNITURE",
+		"date": "23 September 2022",
+		"title": "Begineer guide buying minimal sofa",
+		"link": "#"
+	},
+	{
+		"img": "img/a-2.png",
+		"name": "TABLE",
+		"date": "23 September 2022",
+		"title": "Buying best minimal computer table",
+		"link": "#"
+	},
+	{
+		"img": "img/a-3.png",
+		"name": "BENCH",
+		"date": "23 March 2022",
+		"title": "How to choose best modern bench",
+		"link": "#"
+	},
+	{
+		"img": "img/a-4.png",
+		"name": "CHAIR",
+		"date": "23 March 2022",
+		"title": "Best Summer Outfit Style in this Country",
+		"link": "#"
+	}
+]

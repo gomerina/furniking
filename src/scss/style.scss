@@ -1,0 +1,72 @@
+body {
+	font-family: 'Rubik';
+	font-size: 14px;
+	line-height: 16.6px;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.main__section {
+	display: flex;
+	position: relative;
+}
+.heading {
+	text-transform: uppercase;
+	font-size: 36px;
+	font-family: 'Mulish';
+	text-align: center;
+	font-weight: 700;
+	line-height: 45px;
+	color: #555555;
+	margin: 0 0 50px 0;
+	padding: 0 20px;
+}
+.product__box {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 30px;
+	margin: 0 0 50px 0;
+}
+.customers {
+	margin: 0 0 50px 0;
+}
+.products {
+	margin: 0 0 50px 0;
+}
+.articles {
+	margin: 0 0 50px 0;
+}
+@import './block/header.scss';
+@import './components/header-select.scss';
+@import './components/shop-btn.scss';
+@import './block/menu.scss';
+@import './block/main-sidebar.scss';
+@import './block/main-slider.scss';
+@import './block/advantages.scss';
+@import './block/offer.scss';
+@import './block/product-card.scss';
+@import './block/special.scss';
+@import './block/customers.scss';
+@import './block/articles.scss';
+@import './block/footer.scss';
+
+@media screen and (max-width: 550px) {
+	.heading {
+		font-size: 24px;
+		margin: 0 0 25px 0;
+	}
+	.product__box {
+		margin: 0 0 25px 0;
+	}
+	.products {
+		margin: 0 0 25px 0;
+	}
+	.customers {
+		margin: 0 0 25px 0;
+	}
+	.articles {
+		margin: 0 0 25px 0;
+	}
+}
