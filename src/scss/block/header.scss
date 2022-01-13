@@ -1,12 +1,16 @@
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
 .header__top {
 	background: #7AC751;
 	padding: 15px 0;
 }
 .header__bottom {
 	padding: 25px 0;
-	position: sticky;
-	top: 0;
-	left: 0;
+	background: #fff;
 }
 .header__top-inner,
 .header__bottom-inner {
@@ -47,6 +51,7 @@
 .header__mobile-box {
 	padding: 0px 0 10px 0;
 	display: none;
+	background: #fff;
 }
 .header__search-input {
 	border-radius: 8px 0px 0px 8px;
