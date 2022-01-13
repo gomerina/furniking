@@ -4,7 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 	<title></title>
 </head>
 <body>
@@ -12,7 +16,7 @@
 	<main class="page-body">
 		<div class="menu">
 			<div class="menu__inner container">
-				<div class="menu__dropdown">
+				<div class="menu__dropdown" onclick="openSidebar();">
 					<div class="menu__dropdown-burger">
 						<span></span>
 						<span></span>
@@ -26,6 +30,7 @@
 					<li class="menu__list-item"><a href="#" class="menu__list-link">BLOG</a></li>
 					<li class="menu__list-item"><a href="#" class="menu__list-link">ABOUT</a></li>
 					<li class="menu__list-item"><a href="#" class="menu__list-link">CONTACT US</a></li>
+					<li class="close__menu" onclick="closeMenu();">X</li>
 				</ul>
 				<button class="menu__btn">MENU</button>
 			</div>
@@ -335,10 +340,10 @@
 									<img src="img/customer.png" alt="">
 								</div>
 								<p class="customers__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 								<p class="customer__name">Angelina Joly</p>
 								<p class="customer__post">Co-founder</p>
@@ -359,6 +364,7 @@
 		</div>
 	</main>
 	@@include("chunk/footer.html")
+	<div class="overlay"></div>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

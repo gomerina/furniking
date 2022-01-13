@@ -223,7 +223,7 @@ let _slideToggle = (target, duration = 500) => {
 	}
 }
 // ================================
-
+// Слайдеры
 let swiper = new Swiper(".main-slider", {
 	pagination: {
 		el: ".swiper-pagination",
@@ -241,3 +241,59 @@ let customersSwiper = new Swiper(".customers__inner", {
 		clickable: true,
 	},
 });
+// ================================
+
+// Сайдбар
+function openSidebar() {
+	let mainSidebar = document.querySelector('.main-sidebar');
+	mainSidebar.classList.toggle('active');
+}
+let menuBtn = document.querySelector('.menu__btn');
+let menu = document.querySelector('.menu__list');
+let overlay = document.querySelector('.overlay');
+menuBtn.addEventListener('click', function(e){
+	menu.classList.add('active');
+	overlay.classList.add('active');
+	document.body.style.overflow = 'hidden';
+})
+overlay.addEventListener('click', function(){
+	menu.classList.remove('active');
+	overlay.classList.remove('active');
+	document.body.style.overflow = 'hidden auto';
+})
+function closeMenu() {
+	menu.classList.remove('active');
+	overlay.classList.remove('active');
+	document.body.style.overflow = 'hidden auto';
+}
+setTimeout(function(){
+	menu.style.display = 'flex';
+}, 300)
+
+
+let mobileSearchBox = document.querySelector('.header__mobile-box');
+let headerSearch = document.querySelector('.header__search');
+let headerSearchBox = document.querySelector('.header__search-box');
+function searchShuffle() {
+	if (window.innerWidth <= 769) {
+		mobileSearchBox.appendChild(headerSearch);
+	}
+}
+function searchBack () {
+	if (window.innerWidth > 769) {
+		headerSearchBox.appendChild(headerSearch);
+	}
+}
+searchShuffle();
+searchBack();
+window.addEventListener('resize', function(){
+	if (window.innerWidth <= 769) {
+		searchShuffle();
+	} else {
+		searchBack();
+	}
+})
+function openSearch() {
+	mobileSearchBox.classList.toggle('active');
+	headerSearch.classList.toggle('active');
+}

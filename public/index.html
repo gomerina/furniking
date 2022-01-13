@@ -4,7 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 	<title></title>
 </head>
 <body>
@@ -14,7 +18,7 @@
 			<div class="header__top-inner container">
 				<div class="header__top-welcome">Welcome to our online shop</div>
 				<div class="header__top-tools">
-					<form>
+					<form class="header__search-form">
 						<div class="form__item">
 							<select name="country" class="form__select">
 								<option value="English" selected>English (USD)</option>
@@ -30,45 +34,51 @@
 				</div>
 			</div>
 		</div>
-		<div class="header__bottom">
-			<div class="header__bottom-inner container">
-				<a href="#" class="logo header__logo">
-					<img src="img/sprite.svg#logo" alt="">
-				</a>
-				<form action="#" class="header__search-form">
-					<input type="text" name="search" class="header__search-input" placeholder="Search here">
-					<button class="header__categories">Categories</button>
-					<button class="header__search-btn"></button>
-				</form>
-				<div class="header__bottom-tools">
-					<a href="#" class="header__tools-item basket">
-						<div class="basket__indicator">4</div>
+		<div>
+			<div class="header__bottom">
+				<div class="header__bottom-inner container">
+					<a href="#" class="logo header__logo">
+						<img src="img/sprite.svg#logo" alt="">
 					</a>
-					<a href="#" class="header__tools-item notify">
-					</a>
-					<a href="#" class="header__tools-item user">
-					</a>
-					<div class="mobile__search">
-						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g clip-path="url(#clip0_2_89)">
-						<path d="M12.7 11.3C13.6 10.1 14.1 8.7 14.1 7.1C14.1 3.2 11 0 7.1 0C3.2 0 0 3.2 0 7.1C0 11 3.2 14.2 7.1 14.2C8.7 14.2 10.2 13.7 11.3 12.8L14.3 15.8C14.5 16 14.8 16.1 15 16.1C15.2 16.1 15.5 16 15.7 15.8C16.1 15.4 16.1 14.8 15.7 14.4L12.7 11.3ZM7.1 12.1C4.3 12.1 2 9.9 2 7.1C2 4.3 4.3 2 7.1 2C9.9 2 12.2 4.3 12.2 7.1C12.2 9.9 9.9 12.1 7.1 12.1Z" fill="#555555"/>
-						</g>
-						<defs>
-						<clipPath id="clip0_2_89">
-						<rect width="16" height="16" fill="white"/>
-						</clipPath>
-						</defs>
-						</svg>
+					<div class="header__search-box">
+						<form action="#" class="header__search">
+							<input type="text" name="search" class="header__search-input" placeholder="Search here">
+							<button class="header__search-btn"></button>
+						</form>
+					</div>	
+					<div class="header__bottom-tools">
+						<a href="#" class="header__tools-item basket">
+							<div class="basket__indicator">4</div>
+						</a>
+						<a href="#" class="header__tools-item notify">
+						</a>
+						<a href="#" class="header__tools-item user">
+						</a>
+						<div class="mobile__search" onclick="openSearch();">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_2_89)">
+							<path d="M12.7 11.3C13.6 10.1 14.1 8.7 14.1 7.1C14.1 3.2 11 0 7.1 0C3.2 0 0 3.2 0 7.1C0 11 3.2 14.2 7.1 14.2C8.7 14.2 10.2 13.7 11.3 12.8L14.3 15.8C14.5 16 14.8 16.1 15 16.1C15.2 16.1 15.5 16 15.7 15.8C16.1 15.4 16.1 14.8 15.7 14.4L12.7 11.3ZM7.1 12.1C4.3 12.1 2 9.9 2 7.1C2 4.3 4.3 2 7.1 2C9.9 2 12.2 4.3 12.2 7.1C12.2 9.9 9.9 12.1 7.1 12.1Z" fill="#555555"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_2_89">
+							<rect width="16" height="16" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>	
+		<div class="header__mobile-box">
+			
 		</div>
 	</header>
 
 	<main class="page-body">
 		<div class="menu">
 			<div class="menu__inner container">
-				<div class="menu__dropdown">
+				<div class="menu__dropdown" onclick="openSidebar();">
 					<div class="menu__dropdown-burger">
 						<span></span>
 						<span></span>
@@ -82,6 +92,7 @@
 					<li class="menu__list-item"><a href="#" class="menu__list-link">BLOG</a></li>
 					<li class="menu__list-item"><a href="#" class="menu__list-link">ABOUT</a></li>
 					<li class="menu__list-item"><a href="#" class="menu__list-link">CONTACT US</a></li>
+					<li class="close__menu" onclick="closeMenu();">X</li>
 				</ul>
 				<button class="menu__btn">MENU</button>
 			</div>
@@ -917,10 +928,10 @@
 									<img src="img/customer.png" alt="">
 								</div>
 								<p class="customers__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 								<p class="customer__name">Angelina Joly</p>
 								<p class="customer__post">Co-founder</p>
@@ -1125,6 +1136,7 @@
 		</div>	
 	</div>
 </footer>
+	<div class="overlay"></div>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

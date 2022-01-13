@@ -59,6 +59,9 @@
 .menu__list-link {
 	color: #555555;
 }
+.close__menu {
+	display: none;
+}
 @media screen and (max-width: 950px) {
 	.menu__list {
 		margin: 0 0 0 40px;
@@ -70,6 +73,42 @@
 @media screen and (max-width: 769px) {
 	.menu__list {
 		display: none;
+		position: fixed;
+		top: 0;
+		right: -300px;
+		width: 40%;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		z-index: 5;
+		transition: right .4s linear;
+		min-height: 100vh;
+		padding: 50px 15px 0 15px;
+		overflow-y: auto;
+		&.active {
+			right: 0;
+			transition: right .4s linear;
+		}
+	}
+	.close__menu {
+		position: absolute;
+		top: 50px;
+		right: 30px;
+		font-size: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 32px;
+		height: 32px;
+	}
+	.menu__list-item {
+		margin: 0 0 30px 0;
+		line-height: 25px;
+	}
+	.menu__list-link {
+		font-size: 26px;
 	}
 	.menu__btn {
 		display: inline-block;
@@ -91,5 +130,9 @@
 	}
 	.menu__dropdown-burger {
 		margin: 0 10px 0 0;
+	}
+	.menu__list {
+		width: 80%;
+		right: -550px;
 	}
 }
