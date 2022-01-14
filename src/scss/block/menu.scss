@@ -85,8 +85,9 @@
 		z-index: 102;
 		transition: right .4s linear;
 		min-height: 100vh;
+		height: 100%;
 		padding: 50px 15px 0 15px;
-		overflow-y: auto;
+		overflow: auto;
 		&.active {
 			right: 0;
 			transition: right .4s linear;
@@ -94,8 +95,8 @@
 	}
 	.close__menu {
 		position: absolute;
-		top: 50px;
-		right: 30px;
+		top: 25px;
+		right: 20px;
 		font-size: 32px;
 		display: flex;
 		justify-content: center;
